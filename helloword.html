@@ -1,0 +1,175 @@
+<!DOCTYPE html>  //!DOCTYPE规定浏览器文档使用哪种html或者xhtml规范
+
+
+<!--
+meta标签是单标签，用于定义页面的元信息。元信息不会显示唉浏览器窗口中，但是对于机器是可读的。在HTML页面中，可以添加多个meta标签
+作用是：设置页面的属性。如设置搜索引擎的属性，如设置关键字、简介、作者、机器人向导、版权、编辑器等
+设置字符编码的属性
+link 标签可引用外部文件。它是单标签，一个页面允许使用多个link标签引用多个外部文件
+<link/>标签的语法格式： <link href="" rel="" type=""/>
+
+style标签用于为HTML文档定义样式。它是双标签。每个HTML文档能包含多个style标签
+style标签中type属性必须设置，且属性取值只能"text/css"
+
+JavaScript代码必须放在script标签中
+script标签可以放在html任何地方，一般建议放在head标签里
+<script src="...."></script> 引用外部的script文件
+
+如果把所有的css都写在html文件里面，一旦样式比较多的时候，就会显得不易维护  这个时候就会选择把所有的css内容，
+放在一个独立文件里通常这个文件会被命名为 style.css
+
+BootStrap需要JQuery才能正常工作，所以需要导入jquery.min.js
+接着是Bootstrap的css,里面定义了各种样式
+最后是BootStrap的js，用于产生交互效果，比如关闭警告框
+
+-->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="https://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
+<link href="https://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+<script src="https://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+</head>
+  
+<!--
+css的语法
+selector{property:value}
+即 选择器{属性：值}
+
+选择器主要分3种
+元素选择器 : p{}  <p>p元素</p>
+id选择器: #p1{}   <p id="p1">id=p1的p</p>
+类选择器: .pre{}  <p class="pre">前三个</p>
+
+更准确的选择，同时根据元素名和class来选择
+p.blue
+
+style属性的作用
+提供了一种改变所有HTML
+-->
+
+<style>
+p#percentage{
+     width:50%;
+     height:50%;
+     background-color:pink;
+}
+p#pix{
+     width:180px;
+     height:180px;
+     background-color:green;
+}
+</style>
+
+<p id="percentage">按比例设置尺寸50%宽 50%高</p>
+<p id="pix">按像素设置尺寸 180px宽 50px 高</p>
+
+<!--
+ a:hover指的是超链的状态
+ span是用来布局  不换行
+ <strong>用来显示粗体
+
+<span class=" glyphicon glyphicon-shopping-cart redColor" ></span>  为BootStrap里的功能
+-->
+
+<style>
+body{
+    font-size: 12px;
+    font-family: Arial;
+}
+a{
+    color:#999;
+}
+.redColor{
+    color: #C40000 !important;
+}
+nav.top{
+    background-color: #f2f2f2;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom:1px solid  #e7e7e7;
+}
+nav.top span, nav.top a{
+    color: #999;
+    margin: 0px 10px 0px 10px;
+}
+
+nav.top a:hover{        
+    color: #C40000;
+    text-decoration: none;
+}
+</style>
+  
+<nav class="top ">
+        <a href="#nowhere">
+            <span class="glyphicon glyphicon-home redColor"></span>
+            天猫首页
+        </a> 
+            
+        <span>喵，欢迎来天猫</span>
+            <a href="#nowhere">请登录</a>
+            <a href="#nowhere">免费注册</a> 
+      
+        <span class="pull-right">
+            <a href="#nowhere">我的订单</a>
+            <a href="#nowhere">
+            <span class=" glyphicon glyphicon-shopping-cart redColor" ></span>
+            购物车<strong>0</strong>件</a>       
+        </span>
+            
+</nav>
+
+
+<style>
+     body{
+          font-size:20px;
+          font-family:Ties New Roman;
+     }
+</style>
+<nzb class="middle">
+     <span>哈哈，试一下</span>
+     <a href="#nowhere">一个链接</a>
+
+     <span class="pull-right">到右边了?</span>
+
+     <a href="#nowhere">
+          <span class="glyphicon glyphicon-shopping-cart redColor"></span>
+          购物车
+     </a>
+
+</nzb>
+
+
+<!--
+     <a>是放置链接的
+     span和div的区别, span占用的是内容有多宽就占用多宽的空间距离，div占用的位置是一行
+-->
+
+<div>
+     <a href="#nowhere">
+          <img class="logo" src="https://how2j.cn/tmall/img/site/logo.gif" id="logo">
+     </a>
+
+     <div class="searchDiv">
+          <input type="text" placeholder="时尚男鞋 太阳镜" name="keyword">
+          <buttton class="searchButton" type="submit">搜索</buttton>
+          <div class="searchBelow">
+               <span>
+                    <a href="#nowhere">平衡车</a> <span>|</span>
+               </span>
+
+               <span>
+                    <a href="#nowhere">扫地机器人</a> <span>|</span>
+               </span>
+
+               <span>
+                    <a href="#nowhere">榨汁机</a> <span>|</span>
+               </span>
+
+          </div>
+     </div>
+</div>
+
+<div style="height:100"></div>
+
+<input type="text" placeholder="时尚男鞋 太阳镜" name="keyword">
